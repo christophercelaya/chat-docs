@@ -1,23 +1,40 @@
-# OpenAI Embeddings
+# The Tracker
 
-OpenAI embeddings are pre-trained language models used for natural language processing tasks. These models are built using deep learning algorithms and can be fine-tuned for specific tasks. OpenAI provides several pre-trained embeddings, including GPT-2, GPT-3, and BERT. Each of these models has a different number of parameters and can be used for different tasks.
+Assignee: Christopher Celaya, Marianna
+Description: Identified data types, header properties, naving convention, header titles, reduced tracker information
+Due: May 3, 2023
+Priority: Critical
+Status: Done
+Tags: Improvement, Pipeline, Tracker
 
-To use OpenAI embeddings, you can install the OpenAI API and authenticate with your API key. Then, you can load the desired OpenAI embedding model and use it for your NLP task. For example, you can generate text using the model by calling the completions method.
+## What did we discuss
 
-OpenAI embeddings are trained on large amounts of text data and are designed to capture the meaning of words and phrases in a way that is useful for downstream NLP tasks. This is achieved through a process called unsupervised learning, where the model learns from the patterns in the data without being explicitly trained on a specific task.
+Today we discussed technical requirements such as identifying specific data types per cell.
 
-Once trained, OpenAI embeddings can be used for a variety of NLP tasks, such as text classification, sentiment analysis, and language translation. In addition, they can be fine-tuned for specific tasks by providing additional training data and adjusting the model's parameters.
+## **What work did we do**
 
-OpenAI provides several pre-trained embedding models with varying sizes and capabilities. GPT-2 and GPT-3 are both transformer-based models that are well-suited for language generation tasks, such as text completion and question answering. BERT, on the other hand, is a bidirectional encoder that is particularly useful for tasks that require understanding the relationship between different words in a sentence, such as sentiment analysis and named entity recognition.
+We created a new template for an upgraded version of our tracker, now called the "Pipeline."
 
-Overall, OpenAI embeddings are a powerful tool for NLP tasks and have been used to achieve state-of-the-art performance on a wide range of benchmarks and applications.
+## **Why did we do this**
 
-## Storing Embeddings in Postgres
+We did this to ensure data consistency, prepped UI development for streamline, enhanced user experience by providing appropriate input validation and display formatting.
 
-`pgvector` is a Postgres extension that provides support for vector operations, including similarity search and nearest neighbor search. It allows you to store vectors as columns in a database table and perform vector operations on them using SQL queries.
+## **What problem did we solve**
 
-One interesting use case of `pgvector` is to use it in conjunction with OpenAI embeddings. Since OpenAI embeddings represent words and phrases as high-dimensional vectors, you can store these vectors in a pgvector column and use the extension's similarity search capabilities to find similar words or phrases in a large dataset.
+We solved for data consistency, UI development, resolved processing errors within Power Apps, and improved user experience.
 
-For example, let's say you have a database of customer reviews and you want to find all the reviews that mention a particular product. You could use OpenAI embeddings to represent each review as a vector and store these vectors in a pgvector column. Then, you could perform a similarity search to find all the reviews that are similar to the vector representing the product name.
+## **What potential problems did we prevent from happening**
 
-This approach can be very powerful for applications that involve large amounts of text data, as it allows you to perform complex queries on the data using vector operations. However, it does require some additional setup and configuration compared to traditional SQL queries, so it may not be suitable for all use cases.
+By simplifying the tracker, we significantly reduced inconsistency and corruption of data processes, performance issues, increased errors, maintenance, service tickets (applicable when help desk), reduced data quality, difficulty in data integration, analysis, and compromised security.
+
+## **What did we improve**
+
+We improved the overall structure, organization, and usability of the tracker. The Pipeline presents essential information more clearly, facilitating better communication and automation flow in the Microsoft App.
+
+## **How we did it**
+
+We reviewed the existing tracker and identified areas for improvement. We removed header titles, optimized naming conventions, eliminated parameter options per column, and assigned data types for each column. We aimed at creating a visually clean and straightforward structure for the Pipeline.
+
+## **What do we know now**
+
+We understand the importance of simplicity and user-friendliness in a tracking tool, and we have a clearer vision of maintaining the Pipeline as we continue to build on top.
